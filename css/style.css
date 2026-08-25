@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+      font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    background-color: aliceblue;
+
+}
+
+body > header {
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+body > main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.informe-cidade {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#enviar-cidade {
+    width: 100px;
+    height: auto;
+    border-color: cornflowerblue;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: cornflowerblue;
+}
+
+#nome-cidade {
+    border: 1px solid rgb(74, 109, 173);
+    height: 20px;
+    width: 250px;
+}
+
+#texto-cidade{
+    font-size: x-large;
+    color: rgb(74, 109, 173);
+}
+
+.previsao {
+    width: 40%;
+    height: 600px;
+    border: 3px solid rgb(74, 109, 173);
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.previsao-Atual {
+    width: 100%;
+    height: 70%;
+    border-bottom: 2px solid rgb(74, 109, 173);
+}
+
+.previsao-Horas {
+    width: 100%;
+    height: 30%;
+}
+
+.previsao-Atual > header {
+    height: 20%;
+    width: 100%;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.cidade {
+    font-size: 25px;
+}
+
+.previsao-Atual > main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.horario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* margin-top: 15px; */
+}
+
+.umidade {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    flex-direction: column;
+}
+
+.div-dia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-esquerdo {
+    width: 25%;
+    height: 100%;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.descricao-texto, .descricao-preciptacao, .descricao-nuvens {
+    font-size: 20px;
+    color: rgb(74, 109, 173);
+    font-weight: 600;
+
+}
+
+.horario-dados, .dia, .umidade-dados, .preciptacao, .nuvens {
+    font-size: 35px;
+    color: cornflowerblue;
+    font-weight: 600
+}
+
+.meio {
+    width: 50%;
+    height: 100%;
+}
+
+.div-temperatura {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperatura {
+    font-size: 150px;
+    color: cornflowerblue;
+    font-weight: 600
+}
+
+.div-sensacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 25%;
+}
+
+.descricao-sensacao {
+    font-size: 20px;
+    color: rgb(74, 109, 173);
+    font-weight: 600;
+}
+
+.sensacao {
+    font-size: 30px;
+     color: cornflowerblue;
+     font-weight: 600;
+}
+
+
+.lado-direito {
+    width: 25%;
+    height: 100%;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.div-preciptacao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* margin-top: 15px; */
+    flex-direction: column;
+}
+
+.div-nuvens {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    flex-direction: column;
+}
