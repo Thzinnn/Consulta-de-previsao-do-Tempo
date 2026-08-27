@@ -23,7 +23,7 @@ async function buscarClima(nome_cidade) {
         const lon = cidade.longitude
         await previsao(lat, lon, nome)
     } catch (error) {
-
+        
     }
 
 }
