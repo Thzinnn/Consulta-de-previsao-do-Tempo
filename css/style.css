@@ -30,7 +30,7 @@ body > main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: auto;
     width: 100%;
     flex-direction: column;
 }
@@ -73,17 +73,20 @@ body > main {
 
 .previsao-Atual {
     width: 100%;
-    height: 70%;
+    height: 420px;
     border-bottom: 2px solid rgb(74, 109, 173);
 }
 
 .previsao-Horas {
-    width: 100%;
-    height: 30%;
+    width: auto;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    overflow: auto;
 }
 
 .previsao-Atual > header {
-    height: 20%;
+    height: 84px;
     width: 100%;
     background-color: cornflowerblue;
     display: flex;
@@ -98,7 +101,7 @@ body > main {
 
 .previsao-Atual > main {
     width: 100%;
-    height: 80%;
+    height: 336px;
     display: flex;
     flex-direction: row;
 
@@ -127,9 +130,16 @@ body > main {
     align-items: center;
 }
 
+.div-tempo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .lado-esquerdo {
     width: 25%;
-    height: 100%;
+    height: auto;
     gap: 50px;
     display: flex;
     justify-content: space-between;
@@ -143,20 +153,25 @@ body > main {
 
 }
 
-.horario-dados, .dia, .umidade-dados, .preciptacao, .nuvens {
+.horario-dados, .dia, .umidade-dados, .preciptacao, .nuvens, .tempo {
     font-size: 35px;
     color: cornflowerblue;
     font-weight: 600
 }
 
+.tamanhoSvg {
+    width: 50px;
+    height: 50px;
+}
+
 .meio {
     width: 50%;
-    height: 100%;
+    height: auto;
 }
 
 .div-temperatura {
     width: 100%;
-    height: 75%;
+    height: 252px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +189,7 @@ body > main {
     align-items: center;
     gap: 5px;
     width: 100%;
-    height: 25%;
+    height: 84px;
 }
 
 .descricao-sensacao {
@@ -192,7 +207,7 @@ body > main {
 
 .lado-direito {
     width: 25%;
-    height: 100%;
+    height: auto;
     gap: 50px;
     display: flex;
     justify-content: space-between;
@@ -213,5 +228,29 @@ body > main {
     display: flex;
     align-items: center;
     /* margin-bottom: 15px; */
+    flex-direction: column;
+}
+
+.card {
+    min-width: 100px;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px;
+    border: 2px ridge cornflowerblue;;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(74, 109, 173, 0.603);
+}
+
+.horario-Dia, .temp-horario, .sensacao-horario {
+    font-size: 20px;
+    color: cornflowerblue;
+    font-weight: 600;
+}
+
+.container-temp {
+    display: flex;
     flex-direction: column;
 }
