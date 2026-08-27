@@ -27,7 +27,9 @@ function mostrarErro(erro) {
 forms.addEventListener('submit', function (event) {
     event.preventDefault()
     let cidade = nome_cidade.value
+    nome_cidade.value = ''
     buscarClima(cidade)
+
 })
 
 function ligarCarregamento() {

@@ -4,11 +4,13 @@ Aplicação web estática para consultar as condições meteorológicas atuais e
 
 ## Funcionalidades
 
-- Busca uma cidade pelo nome.
+- Busca uma cidade pelo nome com validação de existência.
 - Exibe temperatura atual e sensação térmica.
 - Mostra horário local, umidade relativa, precipitação e cobertura de nuvens.
 - Apresenta a previsão hora a hora para as próximas 24 horas.
-- Seleciona imagens de acordo com as condições meteorológicas e o período do dia.
+- Seleciona imagens de acordo com as condições meteorológicas (ensolarado, nublado, chuva, trovoada).
+- Indicador visual de carregamento durante a busca.
+- Modal de erro para mensagens de validação e falhas de rede.
 
 ## Tecnologias
 
@@ -74,5 +76,6 @@ As APIs são públicas e não exigem chave de acesso para este projeto. É neces
 ## Observações
 
 - A aplicação usa o primeiro resultado retornado pela busca de cidade.
-- No momento, erros de rede ou cidades não encontradas não são apresentados visualmente ao usuário.
+- Erros de rede e cidades não encontradas são exibidos em um modal para o usuário.
 - A previsão é configurada para o fuso horário de São Paulo.
+- Os dados horários cobrem as próximas 24 horas a partir do horário atual.
