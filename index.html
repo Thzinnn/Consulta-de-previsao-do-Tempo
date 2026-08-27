@@ -19,13 +19,24 @@
             <input type="text" id="nome_cidade" />
             <button id="enviar-cidade" type="submit">Enviar</button>
         </form>
+
+        <span class="carregando" id="carregando">Carregando...</span>
         <div id="previsao" class="previsao">
+            
             <div id="previsao-Atual" class="previsao-Atual">
             </div>
             <div id="previsao-Horas" class="previsao-Horas">
 
-                
             </div>
+        </div>
+        <div class="modal" id="modal">
+            <div class="divModal">
+                <button class="btnModal" id="btnModal" type="button">X</button>
+
+                <span class="erroModal">Mensagem de erro</span>
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
         </div>
     </main>
 

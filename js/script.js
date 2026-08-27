@@ -2,6 +2,27 @@
 const forms = document.getElementById('forms')
 const nome_cidade = document.getElementById('nome_cidade')
 
+function mostrarErro(erro) {
+        const modal = document.getElementById('modal')
+        const overlay = document.getElementById('overlay')
+        const erroSpan = document.querySelector('.erroModal')
+
+        erroSpan.textContent = erro
+
+        modal.classList.add('active')
+        overlay.classList.add('active')
+
+    }
+
+    const btnModal = document.getElementById('btnModal')
+
+    btnModal.addEventListener('click', function fecharModal() {
+        const modal = document.getElementById('modal')
+        const overlay = document.getElementById('overlay')
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
+    })
+
 
 forms.addEventListener('submit', function (event) {
     event.preventDefault()
@@ -9,13 +30,33 @@ forms.addEventListener('submit', function (event) {
     buscarClima(cidade)
 })
 
-async function buscarClima(nome_cidade) {
+function ligarCarregamento() {
+    const carregando = document.getElementById('carregando')
+    const previ_Atual = document.getElementById('previsao-Atual')
+    const previ_Hora = document.getElementById('previsao-Horas')
+    const previsao = document.getElementById('previsao')
+    carregando.classList.add('active')  
+    previ_Atual.innerHTML = ''
+    previ_Hora.innerHTML = ''
+     previsao.classList.remove('active')
+    
+}
 
+function desligarCarregamento() {
+    const carregando = document.getElementById('carregando')
+    carregando.classList.remove('active')
+    
+}
+
+async function buscarClima(nome_cidade) {
+    ligarCarregamento()
     try {
         const res = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(nome_cidade)}`,)
         const dados = await res.json()
-        if (dados.results.length === 0) {
-            throw new Error("Deu ruim mano")
+        if (!dados.results) {
+            throw new Error("Cidade não encontrada, Digite novamente")
+            
+            
         }
         const cidade = dados.results[0]
         const nome = cidade.name
@@ -23,7 +64,9 @@ async function buscarClima(nome_cidade) {
         const lon = cidade.longitude
         await previsao(lat, lon, nome)
     } catch (error) {
-        
+        mostrarErro(error.message)
+    }finally {
+        desligarCarregamento()
     }
 
 }
@@ -182,9 +225,15 @@ async function previsao(lat, lon, nome) {
 
         });
 
+        const previsao = document.getElementById('previsao')
+        previsao.classList.add('active')
+
         previ_Hora.innerHTML = htmlHoras
 
     } catch (error) {
-
+        mostrarErro(error.message)
     }
+
+    
 }
+
